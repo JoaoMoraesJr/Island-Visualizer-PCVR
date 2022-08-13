@@ -10,14 +10,17 @@ public class Player : NetworkBehaviour
     [SerializeField] Camera playerCamera;
     private void Start()
     {
-        if (!isLocalPlayer)
+        if (isLocalPlayer)
         {
             foreach (Behaviour component in disabledComponentsForNetworkPlayers)
             {
-                component.enabled = false;
+                component.enabled = true;
             }
-            playerAudio.enabled = false;
-            playerCamera.enabled = false;
+            playerAudio.enabled = true;
+            playerCamera.enabled = true;
+        } else
+        {
+            Destroy(playerAudio);
         }
     }
 
