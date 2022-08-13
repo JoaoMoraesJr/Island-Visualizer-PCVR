@@ -834,7 +834,7 @@ GameObject:
   - component: {fileID: 2161807618100282985}
   - component: {fileID: 2161807618100282984}
   m_Layer: 0
-  m_Name: LeftHand Controller
+  m_Name: Left Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1544,7 +1544,7 @@ GameObject:
   - component: {fileID: 2161807618440101351}
   - component: {fileID: 2161807618440101345}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Head
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1749,7 +1749,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2161807618475464733}
   m_Layer: 0
-  m_Name: Camera Offset
+  m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2119,7 +2119,7 @@ GameObject:
   - component: {fileID: 2161807618671916911}
   - component: {fileID: 2161807618671916910}
   m_Layer: 0
-  m_Name: Head
+  m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2217,7 +2217,7 @@ GameObject:
   - component: {fileID: 2161807618672798272}
   - component: {fileID: 2161807618672798275}
   m_Layer: 0
-  m_Name: RightHand Controller
+  m_Name: Right Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

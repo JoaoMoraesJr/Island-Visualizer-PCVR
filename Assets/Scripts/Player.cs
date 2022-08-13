@@ -26,9 +26,12 @@ public class Player : NetworkBehaviour
 
     private void Update()
     {
-        if (isLocalPlayer && Input.GetKeyDown(KeyCode.W))
+        if (isLocalPlayer)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + .5f);
+            float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveVertical = Input.GetAxis("Vertical");
+            Vector3 movement = new Vector3(moveHorizontal*0.01f, 0, moveVertical*0.01f);
+            transform.position = transform.position + movement;
         }
     }
 }
