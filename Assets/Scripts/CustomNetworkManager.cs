@@ -18,15 +18,15 @@ public class CustomNetworkManager : NetworkManager
     }
 
 
-    public override void OnClientConnect(NetworkConnection conn)
+    public override void OnClientConnect()
     {
-        base.OnClientConnect(conn);
+        base.OnClientConnect();
         Debug.Log("Connected to Server!");
     }
 
-    public override void OnClientDisconnect(NetworkConnection conn)
+    public override void OnClientDisconnect()
     {
-        base.OnClientDisconnect(conn);
+        base.OnClientDisconnect();
         Debug.Log("Disconnected from server!");
     }
 }
