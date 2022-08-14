@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Player : NetworkBehaviour
 {
     [SerializeField] Behaviour[] disabledComponentsForNetworkPlayers;
     [SerializeField] AudioListener playerAudio;
     [SerializeField] Camera playerCamera;
+    [SerializeField] bool singlePlayer = false;
     private void Start()
     {
-        if (isLocalPlayer)
+        if (isLocalPlayer || singlePlayer)
         {
             foreach (Behaviour component in disabledComponentsForNetworkPlayers)
             {
@@ -18,6 +20,9 @@ public class Player : NetworkBehaviour
             }
             playerAudio.enabled = true;
             playerCamera.enabled = true;
+            GameObject.Find("XR Interaction Manager");
+            transform.Find("Model/Left Hand").GetComponent<XRRayInteractor>().interactionManager = GameObject.Find("XR Interaction Manager").GetComponent<XRInteractionManager>();
+            transform.Find("Model/Right Hand").GetComponent<XRRayInteractor>().interactionManager = GameObject.Find("XR Interaction Manager").GetComponent<XRInteractionManager>();
         } else
         {
             Destroy(playerAudio);
