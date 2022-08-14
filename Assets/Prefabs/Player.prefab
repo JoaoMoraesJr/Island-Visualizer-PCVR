@@ -168,6 +168,8 @@ MonoBehaviour:
     m_Reference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   handAnimator: {fileID: 2161807617469330227}
+  animateHand: {fileID: 7002190628539223782}
+  isLeftHand: 0
 --- !u!95 &2161807617469330227
 Animator:
   serializedVersion: 4
@@ -262,6 +264,8 @@ MonoBehaviour:
     m_Reference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   handAnimator: {fileID: 2161807617622661694}
+  animateHand: {fileID: 7002190628539223782}
+  isLeftHand: 1
 --- !u!95 &2161807617622661694
 Animator:
   serializedVersion: 4
@@ -2852,6 +2856,7 @@ GameObject:
   - component: {fileID: 8560467379332401022}
   - component: {fileID: 774754604381947580}
   - component: {fileID: 1530734682}
+  - component: {fileID: 7002190628539223782}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3267,6 +3272,22 @@ MonoBehaviour:
   showOverlay: 0
   overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
   target: {fileID: 2161807618440101344}
+--- !u!114 &7002190628539223782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2161807618787922815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d3849767462914691a29e8c462f4d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  leftHandAnimator: {fileID: 2161807617622661694}
+  rightHandAnimator: {fileID: 2161807617469330227}
 --- !u!1 &2161807618791551724
 GameObject:
   m_ObjectHideFlags: 0

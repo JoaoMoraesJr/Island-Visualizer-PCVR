@@ -9,6 +9,10 @@ public class AnimateHandOnInput : MonoBehaviour
     public InputActionProperty pinchAnimationAction;
     public InputActionProperty gripAnimationAction;
     public Animator handAnimator;
+    public AnimateHandOnServerTrigger animateHand;
+
+    [SerializeField]
+    public bool isLeftHand = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +23,26 @@ public class AnimateHandOnInput : MonoBehaviour
     void Update()
     {
         float triggerValue = pinchAnimationAction.action.ReadValue<float>();
-        handAnimator.SetFloat("Trigger", triggerValue);
+        if (triggerValue > 0.01f)
+        {
+            animateHand.TriggerHandAnimation(isLeftHand, triggerValue, "Trigger");
+        }
 
         float gripValue = gripAnimationAction.action.ReadValue<float>();
-        handAnimator.SetFloat("Grip", gripValue);
+        if (gripValue > 0.01f)
+        {
+            animateHand.TriggerHandAnimation(isLeftHand, gripValue, "Grip");
+        }
+        //handAnimator.SetFloat("Trigger", triggerValue);
+
+        //float gripValue = gripAnimationAction.action.ReadValue<float>();
+        //handAnimator.SetFloat("Grip", gripValue);
+
+        //if(Input.GetKeyDown(KeyCode.X))
+        //{
+        //    Debug.Log("Sending Hello");
+        //    animateHand.Hello();
+        //}
     }
+
 }
