@@ -37,6 +37,8 @@ public class Player : NetworkBehaviour
             float moveVertical = Input.GetAxis("Vertical");
             Vector3 movement = new Vector3(moveHorizontal*0.01f, 0, moveVertical*0.01f);
             transform.position = transform.position + movement;
+
+
         }
     }
 }

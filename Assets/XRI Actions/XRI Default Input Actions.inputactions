@@ -278,6 +278,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Punch",
+                    "type": "Button",
+                    "id": "3c7413d8-5eb1-479c-a623-3604b52e771d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -366,6 +375,39 @@
                     "processors": "ScaleVector2(x=0),StickDeadzone",
                     "groups": "Generic XR Controller",
                     "action": "Translate Anchor",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2897475f-db71-498c-ae74-602194c1d9b3",
+                    "path": "<XRController>{LeftHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Punch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "45df4ee2-53cf-4079-9fe0-0937a5092e48",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Punch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e67ca5c3-6ebf-4691-b5fa-9f95a3e118da",
+                    "path": "<XRController>{LeftHand}/thumbstickTouched",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Punch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
