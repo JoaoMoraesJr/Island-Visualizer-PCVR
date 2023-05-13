@@ -57,6 +57,7 @@ public class MovementDetection : MonoBehaviour
             // Store the current position in the buffer.
             positionBuffer[bufferIndex] = transform.position;
             GameObject point = Instantiate(pointPrefab, positionBuffer[bufferIndex], Quaternion.identity);
+            Destroy(point, 10);
 
             bool isCircular = IsCircular(positionBuffer, threshold, minRadius);
             if (isCircular && isMoving)

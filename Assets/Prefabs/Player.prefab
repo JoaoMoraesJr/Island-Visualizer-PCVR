@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 702e4c475dd186f49b63e822babf6a33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bufferLength: 50
+  bufferLength: 30
   threshold: 0.1
   minRadius: 1
   minMoveDistance: 0.1
@@ -199,7 +199,8 @@ MonoBehaviour:
   isDetectionActive: 0
   cooldown: 0.5
   positionBuffer: []
-  pointPrefab: {fileID: 0}
+  pointPrefab: {fileID: 1055100534596559711, guid: 3840b2a1075d3134bb6a17c3e00a570f,
+    type: 3}
 --- !u!1 &2161807617340479192
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,7 +988,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2161807618100282986}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2944e867808974942a9fbf9ff886b62e, type: 3}
   m_Name: 
@@ -1021,9 +1022,11 @@ MonoBehaviour:
       type: 3}
   handAnimator: {fileID: 2161807617622661694}
   animateHand: {fileID: 7002190628539223782}
+  detectionCooldown: 3
+  currentCooldownTime: 0
   pinch: 0
   grip: 0
-  detector: {fileID: 0}
+  detector: {fileID: 1332839077}
 --- !u!114 &2161807618100282991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2440,7 +2443,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2161807618672798285}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2944e867808974942a9fbf9ff886b62e, type: 3}
   m_Name: 
@@ -2474,9 +2477,11 @@ MonoBehaviour:
       type: 3}
   handAnimator: {fileID: 2161807617469330227}
   animateHand: {fileID: 7002190628539223782}
+  detectionCooldown: 3
+  currentCooldownTime: 0
   pinch: 0
   grip: 0
-  detector: {fileID: 0}
+  detector: {fileID: 6565604422458157328}
 --- !u!114 &2161807618672798278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3437,8 +3442,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 0
   _assetId: 4199315273
-  serverOnly: 0
-  visible: 0
+  serverOnly: 1
+  visible: 2
   hasSpawned: 0
 --- !u!114 &1388472689643328878
 MonoBehaviour:
@@ -4456,7 +4461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 702e4c475dd186f49b63e822babf6a33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bufferLength: 50
+  bufferLength: 30
   threshold: 0.1
   minRadius: 1
   minMoveDistance: 0.1
@@ -4464,4 +4469,5 @@ MonoBehaviour:
   isDetectionActive: 0
   cooldown: 0.5
   positionBuffer: []
-  pointPrefab: {fileID: 0}
+  pointPrefab: {fileID: 1055100534596559711, guid: 3840b2a1075d3134bb6a17c3e00a570f,
+    type: 3}
