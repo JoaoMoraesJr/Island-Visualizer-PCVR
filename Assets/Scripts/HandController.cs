@@ -21,6 +21,7 @@ public class HandController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentCooldownTime = detectionCooldown;
         pinch = 0;
         grip = 0;
         detector.SetActive(false);
@@ -33,7 +34,7 @@ public class HandController : MonoBehaviour
         if (triggerValue > 0.01f)
         {
             animateHand.TriggerHandAnimation(isLeftHand, triggerValue, "Trigger");
-            if (currentCooldownTime >= detectionCooldown && triggerValue >= 0.99f)
+            if (currentCooldownTime >= detectionCooldown && triggerValue >= 0.80f)
             {
                 //detector.enabled = true;
                 detector.SetActive(true);

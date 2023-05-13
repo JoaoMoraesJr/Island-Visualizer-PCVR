@@ -11,7 +11,7 @@ public class AnimateHandOnServerTrigger : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -29,7 +29,6 @@ public class AnimateHandOnServerTrigger : NetworkBehaviour
     [ClientRpc]
     public void TriggerHandClient(bool isLeftHand, float value, string name)
     {
-        Debug.Log(name + " " + value);
         if (isLeftHand)
         {
             leftHandAnimator.SetFloat(name, value);

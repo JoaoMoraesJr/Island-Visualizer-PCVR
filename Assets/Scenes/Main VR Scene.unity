@@ -16520,6 +16520,7 @@ GameObject:
   - component: {fileID: 1949697635}
   - component: {fileID: 1949697634}
   - component: {fileID: 1949697640}
+  - component: {fileID: 1949697641}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -16534,7 +16535,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949697633}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
   m_Name: 
@@ -16640,6 +16641,18 @@ MonoBehaviour:
   padding: 2
   width: 150
   height: 25
+--- !u!114 &1949697641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949697633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4703383b66ae144a86a75ceee804755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2032017437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16746,6 +16759,11 @@ PrefabInstance:
       propertyPath: sceneId
       value: 2685440611
       objectReference: {fileID: 0}
+    - target: {fileID: 2161807618787922805, guid: d46dcaa5499ffbf4d8d33627ab27e3f2,
+        type: 3}
+      propertyPath: singlePlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2161807618787922813, guid: d46dcaa5499ffbf4d8d33627ab27e3f2,
         type: 3}
       propertyPath: m_RootOrder
@@ -16805,6 +16823,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161807618787922815, guid: d46dcaa5499ffbf4d8d33627ab27e3f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d46dcaa5499ffbf4d8d33627ab27e3f2, type: 3}
