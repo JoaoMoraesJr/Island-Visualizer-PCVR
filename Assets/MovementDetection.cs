@@ -65,8 +65,11 @@ public class MovementDetection : MonoBehaviour
             if (canAddPoint)
             {
                 positionBuffer[bufferIndex] = transform.position;
-                GameObject point = Instantiate(pointPrefab, positionBuffer[bufferIndex], Quaternion.identity);
-                Destroy(point, 10);
+                if (debug)
+                {
+                    GameObject point = Instantiate(pointPrefab, positionBuffer[bufferIndex], Quaternion.identity);
+                    Destroy(point, 10);
+                }
                 if (bufferIndex == positionBuffer.Length - 1) //Deactivate detection for next frames after array is full
                 {
                     if (debug) Debug.Log("Array is full");
