@@ -10,6 +10,7 @@ public class MovementDetection : MonoBehaviour
     public int bufferLength = 30; // The length of the buffer to store previous positions.
     public float detectionTimeOut = 3f;
     public float minDistanceBetweenPoints = 0.1f;
+    public GameObject elementBallPrefab;
     public GameObject trailPrefab;
     private GameObject trail = null;
 
@@ -164,8 +165,14 @@ public class MovementDetection : MonoBehaviour
                 }
             }
         }
-
+        CreateElementBall(normal);
         return true;
     }
 
+    private void CreateElementBall(Vector3 direction)
+    {
+        GameObject element = Instantiate(elementBallPrefab, Camera.main.transform.forward*2, Quaternion.identity);
+        Debug.Log(element.transform.position);
+        Destroy(element, 10);
+    }
 }

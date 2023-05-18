@@ -65,6 +65,7 @@ MonoBehaviour:
   bufferLength: 30
   detectionTimeOut: 3
   minDistanceBetweenPoints: 0.1
+  elementBallPrefab: {fileID: 0}
   trailPrefab: {fileID: 7753476636066668184, guid: 05c4956bbe011f04dbdeb6fab76f9066,
     type: 3}
   positionBuffer: []
@@ -4381,6 +4382,7 @@ MonoBehaviour:
   bufferLength: 30
   detectionTimeOut: 3
   minDistanceBetweenPoints: 0.1
+  elementBallPrefab: {fileID: 0}
   trailPrefab: {fileID: 7753476636066668184, guid: 05c4956bbe011f04dbdeb6fab76f9066,
     type: 3}
   positionBuffer: []
