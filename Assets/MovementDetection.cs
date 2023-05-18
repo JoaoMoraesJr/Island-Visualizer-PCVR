@@ -10,6 +10,8 @@ public class MovementDetection : MonoBehaviour
     public int bufferLength = 30; // The length of the buffer to store previous positions.
     public float detectionTimeOut = 3f;
     public float minDistanceBetweenPoints = 0.1f;
+    public GameObject trailPrefab;
+    private GameObject trail = null;
 
     private float timeBetweenTracking; // The cooldown period in seconds before calculating circularity.
     [SerializeField]
@@ -28,7 +30,14 @@ public class MovementDetection : MonoBehaviour
     private void OnEnable()
     {
         startDetectionTime = Time.time;
+        trail = Instantiate(trailPrefab, this.transform.position, Quaternion.identity);
+        trail.GetComponent<FollowDelay>().objectToFollow = this.gameObject.transform;
         ResetDetection();
+    }
+
+    private void OnDisable()
+    {
+        trail.GetComponent<TrailController>().DestroyTrail();
     }
 
     void ResetDetection()
