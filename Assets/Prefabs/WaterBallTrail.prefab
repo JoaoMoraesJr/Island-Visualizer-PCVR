@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7753476636066668191}
   - component: {fileID: 5939114514902082516}
   m_Layer: 0
-  m_Name: WaterTrail
+  m_Name: WaterBallTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ec43b9c3195ced48999333e134e944c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToFollow: {fileID: 0}
-  followSpeed: 6.5
+  target: {fileID: 0}
+  followSpeed: 5
 --- !u!96 &7753476636066668191
 TrailRenderer:
   serializedVersion: 2
@@ -57,7 +57,7 @@ TrailRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7753476636066668184}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 2
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -69,7 +69,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7e6e968e798e40749839a43d0a9e33ff, type: 2}
+  - {fileID: 2100000, guid: 4ac18dba53759b0448ced89beb186574, type: 2}
   - {fileID: 2100000, guid: 4ab90f6c7775e11448d4c10e4b5e05ef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -91,7 +91,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 2.5
+  m_Time: 2
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -100,7 +100,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.070259094
+        value: 0.971962
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -152,7 +152,7 @@ TrailRenderer:
     numCapVertices: 15
     alignment: 0
     textureMode: 0
-    shadowBias: 0.5
+    shadowBias: 0.8
     generateLightingData: 1
   m_MinVertexDistance: 0.01
   m_Autodestruct: 0
@@ -170,4 +170,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDestroy: 1
-  flagToDelete: 0
+  allowedTimeToDestroyThreshold: 0.2

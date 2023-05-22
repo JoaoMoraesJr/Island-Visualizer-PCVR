@@ -6,7 +6,7 @@ public class TrailController : MonoBehaviour
 {
     public float timeToDestroy = 1f;
     public float allowedTimeToDestroyThreshold = 0.2f;
-    public bool flagToDelete = false;
+    private bool flagToDelete = false;
     private float startTime = 0;
     private float trailStartDuration;
     // Start is called before the first frame update

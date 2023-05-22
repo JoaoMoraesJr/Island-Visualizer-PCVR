@@ -21,6 +21,7 @@ public class MovementDetection : MonoBehaviour
     private float lastCalculationTime;
     private float startDetectionTime;
     public GameObject pointPrefab;
+    public Transform playerTransform;
 
     public bool debug = false;
     void Start()
@@ -32,7 +33,7 @@ public class MovementDetection : MonoBehaviour
     {
         startDetectionTime = Time.time;
         trail = Instantiate(trailPrefab, this.transform.position, Quaternion.identity);
-        trail.GetComponent<FollowDelay>().objectToFollow = this.gameObject.transform;
+        trail.GetComponent<FollowDelay>().target = this.gameObject.transform;
         ResetDetection();
     }
 
@@ -51,6 +52,7 @@ public class MovementDetection : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(playerTransform.forward);
         //Disable if detection timed out
         if (Time.time - startDetectionTime >= detectionTimeOut)
         {
@@ -171,7 +173,8 @@ public class MovementDetection : MonoBehaviour
 
     private void CreateElementBall(Vector3 direction)
     {
-        GameObject element = Instantiate(elementBallPrefab, Camera.main.transform.forward*2, Quaternion.identity);
+        Debug.Log(playerTransform.forward);
+        GameObject element = Instantiate(elementBallPrefab, playerTransform.position + new Vector3(0, 0, 1), Quaternion.identity);
         Debug.Log(element.transform.position);
         Destroy(element, 10);
     }
