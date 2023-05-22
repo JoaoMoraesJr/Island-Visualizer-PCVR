@@ -171,4 +171,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToDestroy: 1
   allowedTimeToDestroyThreshold: 0.2
-  flagToDelete: 0

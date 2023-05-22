@@ -12,7 +12,7 @@ public class TrailController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(GetComponent<TrailRenderer>().time);
+
     }
 
     // Update is called once per frame
@@ -35,6 +35,5 @@ public class TrailController : MonoBehaviour
         flagToDelete = true;
         startTime = Time.time;
         trailStartDuration = GetComponent<TrailRenderer>().time;
-        Debug.Log("Destroy");
     }
 }

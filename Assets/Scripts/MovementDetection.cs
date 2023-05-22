@@ -176,6 +176,5 @@ public class MovementDetection : MonoBehaviour
         Debug.Log(playerTransform.forward);
         GameObject element = Instantiate(elementBallPrefab, playerTransform.position + new Vector3(0, 0, 1), Quaternion.identity);
         Debug.Log(element.transform.position);
-        Destroy(element, 10);
     }
 }
