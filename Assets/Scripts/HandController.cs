@@ -11,7 +11,7 @@ public class HandController : MonoBehaviour
     public InputActionProperty pinchAnimationAction;
     public InputActionProperty gripAnimationAction;
     public Animator handAnimator;
-    public AnimateHandOnServerTrigger animateHand;
+    public AnimateHandOnTrigger animateHand;
     public float detectionCooldown = 3f;
     public float currentCooldownTime = 0f;
     public Transform followTarget;
