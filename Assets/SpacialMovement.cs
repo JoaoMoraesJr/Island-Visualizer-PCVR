@@ -11,7 +11,6 @@ public class SpacialMovement : MonoBehaviour
     private float rotationX = 0.0f;
     private float rotationY = 0.0f;
     private bool allowMovement = false;
-    public Transform lookAt;
 
     private void Start()
     {
