@@ -14,6 +14,7 @@ public class SpacialMovement : MonoBehaviour
 
     private void Start()
     {
+        Cursor.visible = false;
         Invoke("startMovement", delayToStartMovement);
         rotationX = transform.rotation.eulerAngles.x;
         rotationY = transform.rotation.eulerAngles.y;
