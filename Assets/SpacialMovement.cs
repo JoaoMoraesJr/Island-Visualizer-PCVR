@@ -64,6 +64,11 @@ public class SpacialMovement : MonoBehaviour
             Mathf.Clamp(transform.position.y, limitY.x, limitY.y),
             Mathf.Clamp(transform.position.z, limitZ.x, limitZ.y)
         );
+
+        if(Input.GetKeyDown("escape"))
+        {
+            Application.Quit();
+        }
     }
 
     private void startMovement()
