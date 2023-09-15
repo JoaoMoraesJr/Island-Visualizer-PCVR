@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Mirror/Examples/Pong/Scenes/Scene.unity
     guid: 89a84548859e3b643b4fb27984dc2b0d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main VR Scene.unity
     guid: 355ce5c44f612624e8c56251d10450c3
+  - enabled: 1
+    path: Assets/Scenes/Visualization.unity
+    guid: b413ca0408c0ddc49a122a1ea6fa68f0
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 24d6406cdd9adcf4aab6d5257cc6f366,
       type: 2}
