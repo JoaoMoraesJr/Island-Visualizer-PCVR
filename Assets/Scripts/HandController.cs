@@ -23,7 +23,10 @@ public class HandController : MonoBehaviour
     void Start()
     {
         currentCooldownTime = detectionCooldown;
-        detector.SetActive(false);
+        if (detector)
+        {
+            detector.SetActive(false);
+        }
         //interactor = controller.GetComponent<XRBaseInteractor>();
     }
 
@@ -37,7 +40,10 @@ public class HandController : MonoBehaviour
             if (currentCooldownTime >= detectionCooldown && triggerValue >= 0.80f)
             {
                 //detector.enabled = true;
-                detector.SetActive(true);
+                if (detector)
+                {
+                    detector.SetActive(true);
+                }
                 currentCooldownTime = 0;
             } else
             {
